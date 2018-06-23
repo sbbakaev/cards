@@ -2,20 +2,6 @@ import Vue from 'vue/dist/vue.js'
 import { shuffle } from 'lodash'
 import vocabulary from './words'
 
-toggle = (options, current) ->
-  options[(options.indexOf(current) + 1) % options.length]
-
-# words = [
-#   {en: 'word1', ru:'слово1'},
-#   {en: 'word2', ru:'слово2'},
-#   {en: 'word3', ru:'слово3'},
-#   {en: 'word4', ru:'слово4'},
-#   {en: 'word5', ru:'слово5'},
-#   {en: 'word6', ru:'слово6'},
-#   {en: 'word7', ru:'слово7'},
-#   {en: 'word8', ru:'слово8'},
-#   {en: 'word9', ru:'слово9'},
-# ]
 words = vocabulary.map((word) -> Object.assign(word, {guessed: false}));
 setSize = 3
 positionInSet = 0;
