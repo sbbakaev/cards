@@ -1,0 +1,23 @@
+*
+  box-sizing: border-box
+
+%clearfix
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+.fl
+  float: left
+
+.container
+  padding: 0 10
+
+.row
+  @extend %clearfix
+  margin-left: -10
+  margin-right: -10
+
+.col
+  @extend .fl
+  padding: 0 10

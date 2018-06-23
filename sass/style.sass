@@ -1,0 +1,19 @@
+@import reset
+@import layout
+
+$font-stack:    Helvetica, sans-serif
+$primary-color: #333
+
+body
+  font: 100% $font-stack
+  color: $primary-color
+  background-color: #d67
+
+.left, .right
+  @extend .col
+  width: 50%
+ 
+.left-inner, .right-inner
+  background: #66aadd
+  padding: 2 4
+  min-height: 100vh 
