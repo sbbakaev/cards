@@ -1,6 +1,14 @@
-.container
-  .row
-    .left
-      .left-inner  left
-    .right
-      .right-inner right
+.card(v-cloak)
+  .word {{ words[state] }}
+
+  .container.buttons
+    .buttons-title {{ questions[state] }}
+    .row(v-if="state==0")
+      .fullwidth
+        button.open(@click="open") Open
+    .row(v-else)
+      .left
+        button.no(@click="no") No
+      .right
+        button.yes(@click="yes") Yes
+      
