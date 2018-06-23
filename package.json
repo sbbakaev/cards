@@ -7,7 +7,7 @@
     "start": "parcel index.pug",
     "prebuild": "rimraf dist",
     "build": "parcel build index.pug --public-url .",
-    "predeploy": "npm build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
@@ -16,13 +16,13 @@
   "devDependencies": {
     "coffeescript": "^2.3.1",
     "gh-pages": "^1.2.0",
-    "lodash": "^4.17.10",
     "node-sass": "^4.9.0",
     "parcel-bundler": "^1.9.2",
     "pug": "^2.0.3",
     "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "vue": "^2.5.16"
+    "vue": "^2.5.16",
+    "lodash": "^4.17.10"
   }
 }
