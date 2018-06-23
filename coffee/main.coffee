@@ -2,17 +2,19 @@ import Vue from 'vue/dist/vue.js'
 import { shuffle } from 'lodash'
 import vocabulary from './words'
 
-words = vocabulary.map((word) -> Object.assign(word, {guessed: false}));
+words = vocabulary.map (word) -> Object.assign(word, {guessed: false})
 setSize = 3
-positionInSet = 0;
-wordsToAsk = [];
+positionInSet = 0
+wordsToAsk = []
 
 getWordsToAsk = () ->
-  additional = [];
-  notGuessed = shuffle(words.filter((word) -> !word.guessed)).slice(0, setSize);
+  additional = []
+  notGuessed = shuffle words.filter((word) -> !word.guessed)
+  .slice(0, setSize)
   if notGuessed.length < setSize
-    additional = shuffle(words.filter((word) -> word.guessed)).slice(0, setSize - notGuessed.length);
-  shuffle [...notGuessed, ...additional];
+    additional = shuffle words.filter((word) -> word.guessed)
+    .slice(0, setSize - notGuessed.length)
+  shuffle [...notGuessed, ...additional]
 
 
 
@@ -37,7 +39,7 @@ methods =
     @state = 1
 
   nextWord: ->
-    positionInSet++;
+    positionInSet++
     if positionInSet >= setSize
       positionInSet = 0
       wordsToAsk.forEach((asked) -> words = words.map(

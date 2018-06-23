@@ -34,7 +34,6 @@ export default words = [
   {en: 'show', ru: 'показывать'}
   {en: 'hear', ru: 'слышать'}
   {en: 'play', ru: 'играть'}
-
   {en: 'run', ru: 'бежать'}
   {en: 'move', ru: 'двигаться'}
   {en: 'live', ru: 'жить'}
@@ -42,7 +41,6 @@ export default words = [
   {en: 'bring', ru: 'приносить'}
   {en: 'happen', ru: 'случаться'}
   {en: 'write', ru: 'писать'}
-
   {en: 'sit', ru: 'сидеть'}
   {en: 'stand', ru: 'стоять'}
   {en: 'lose', ru: 'терять'}

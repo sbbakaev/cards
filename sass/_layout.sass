@@ -1,3 +1,5 @@
+$half-space: 10px
+  
 *
   box-sizing: border-box
 
@@ -11,13 +13,13 @@
   float: left
 
 .container
-  padding: 0 10px
+  padding: 0 $half-space
 
 .row
   @extend %clearfix
-  margin-left: -10px
-  margin-right: -10px
+  margin-left: -$half-space
+  margin-right: -$half-space
 
 .col
   @extend .fl
-  padding: 0 10px
+  padding: 0 $half-space
