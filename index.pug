@@ -5,6 +5,9 @@ html
     meta(name="viewport" content="width=device-width,initial-scale=1.0")
 
   body
-    include card.pug
+    //- we need .wpapper just to bind Vue instance to it
+    //- (binding to the body element is discouraged)
+    .wrapper
+      include card.pug
 
     script(src="coffee/main.coffee")

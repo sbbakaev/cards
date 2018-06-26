@@ -1,6 +1,6 @@
 import Vue from 'vue/dist/vue.js'
 import { shuffle } from 'lodash'
-import vocabulary from './words'
+import vocabulary from './words.1'
 
 words = vocabulary.map (word) -> Object.assign(word, {guessed: false})
 setSize = 3
@@ -55,7 +55,7 @@ hooks =
     @words = [wordsToAsk[positionInSet].en, wordsToAsk[positionInSet].ru]
 
 new Vue(Object.assign({
-  el: '.card'
+  el: '.wrapper'
   data
   methods
 }, hooks))
