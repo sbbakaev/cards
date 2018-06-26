@@ -5,7 +5,7 @@
   "main": "index.pug",
   "scripts": {
     "start": "parcel index.pug",
-    "prebuild": "rimraf dist",
+    "prebuild": "rimraf dist .cache",
     "build": "parcel build index.pug --public-url .",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"

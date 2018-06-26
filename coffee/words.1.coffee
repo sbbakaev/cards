@@ -11,7 +11,7 @@ export default words = [
   {en:"disappointed", ru:"разочарованный"}
   {en:"easygoing", ru:"покладистый, благодушный"}
   {en:"engineer", ru:"инженер"}
-  {en:"expensive", ru:"возбужденный, взволнованный"}
+  {en:"excited", ru:"возбужденный, взволнованный"}
   {en:"generous", ru:"щедрый"}
   {en:"(to) grow up", ru:"вырасти "}
   {en:"in a hurry", ru:"в спешке"}
