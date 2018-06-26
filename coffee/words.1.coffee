@@ -15,21 +15,21 @@ export default words = [
   {en:"generous", ru:"щедрый"}
   {en:"(to) grow up", ru:"вырасти "}
   {en:"in a hurry", ru:"в спешке"}
-  {en:"be", ru:"was, were, been - быть, являться"}
-  {en:"become", ru:"became, become - становиться"}
-  {en:"begin", ru:"began, begun - начинать"}
-  {en:"build", ru:"built, built - строить"}
-  {en:"buy", ru:"bought, bought - покупать"}
-  {en:"come", ru:"came, come - приходить"}
-  {en:"do", ru:"did, done - делать,  выполнять"}
-  {en:"drive", ru:"drove, driven - ездить"}
-  {en:"eat", ru:"ate, eaten - есть,  поглощать"}
-  {en:"fall", ru:"fell, fallen - падать"}
-  {en:"give", ru:"gave, given - дать, подать"}
-  {en:"lay", ru:"laid, laid - класть, положить"}
-  {en:"lead", ru:"led, led - сопровождать, руководить"}
-  {en:"lose", ru:"lost, lost - терять, лишаться"}
-  {en:"mean", ru:"meant, meant - значить, иметь в виду"}
+  {en:"be (was, were, been)", ru:"быть, являться"}
+  {en:"become (became, become)", ru:"становиться"}
+  {en:"begin (began, begun)", ru:"начинать"}
+  {en:"build (built, built)", ru:"строить"}
+  {en:"buy (bought, bought)", ru:"покупать"}
+  {en:"come (came, come)", ru:"приходить"}
+  {en:"do (did, done)", ru:"делать,  выполнять"}
+  {en:"drive (drove, driven)", ru:"ездить"}
+  {en:"eat (ate, eaten)", ru:"есть,  поглощать"}
+  {en:"fall (fell, fallen)", ru:"падать"}
+  {en:"give (gave, given)", ru:"дать, подать"}
+  {en:"lay (laid, laid)", ru:"класть, положить"}
+  {en:"lead (led, led)", ru:"сопровождать, руководить"}
+  {en:"lose (lost, lost)", ru:"терять, лишаться"}
+  {en:"mean (meant, meant)", ru:"значить, иметь в виду"}
   {en:"(to) keep", ru:"оставлять себе"}
   {en:"(to) lie", ru:"лежать"}
   {en:"mall", ru:"комплекс магазинов"}
