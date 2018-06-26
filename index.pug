@@ -7,7 +7,7 @@ html
   body
     //- we need .wpapper just to bind Vue instance to it
     //- (binding to the body element is discouraged)
-    .wrapper
+    .wrapper(v-cloak)
       include card.pug
 
     script(src="coffee/main.coffee")
