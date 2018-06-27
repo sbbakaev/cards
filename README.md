@@ -10,3 +10,5 @@ After "Open" button has been pressed - right tranlsation is shown.
 If you remembered the translation correctly - click "Yes" button. The probability you'll see this card again will decrease.
 
 If right translation differs from your version (or you were not able to remember it at all) - click "No" button. And the card will be shown to you again soon.
+
+Demo: https://gerkirill.github.io/cards/
