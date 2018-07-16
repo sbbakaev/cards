@@ -2,11 +2,11 @@
   "name": "ppcs-starter",
   "version": "1.0.0",
   "description": "",
-  "main": "index.pug",
+  "main": "src/views/index.pug",
   "scripts": {
-    "start": "parcel index.pug",
+    "start": "parcel src/views/index.pug",
     "prebuild": "rimraf dist .cache",
-    "build": "parcel build index.pug --public-url .",
+    "build": "parcel build src/views/index.pug --public-url .",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
@@ -14,15 +14,17 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "coffeescript": "^2.3.1",
+    "@types/lodash": "^4.14.112",
     "gh-pages": "^1.2.0",
     "node-sass": "^4.9.0",
     "parcel-bundler": "^1.9.2",
     "pug": "^2.0.3",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "typescript": "^2.9.2"
   },
   "dependencies": {
+    "lodash": "^4.17.10",
     "vue": "^2.5.16",
-    "lodash": "^4.17.10"
+    "words": "^0.1.3"
   }
 }
