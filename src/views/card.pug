@@ -1,9 +1,12 @@
 .card
-  .word {{ words[state] }}
+  .word {{ vocabulary.currentWord[vocabulary.state] }}
+  .statistic 
+    .qty Guessed {{vocabulary.guessedQty}}
+    .qty Not Guessed {{vocabulary.notGuessedQty}}
 
 .container.buttons
-  .buttons-title {{ questions[state] }}
-  .row(v-if="state==0")
+  .buttons-title {{ questions[vocabulary.state] }}
+  .row(v-if="vocabulary.state==0")
     .fullwidth
       button.open(@click="open") Open
   .row(v-else)
