@@ -8,19 +8,26 @@
     "prebuild": "rimraf dist .cache",
     "build": "parcel build src/views/index.pug --public-url .",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "test": "mocha -r ts-node/register ./test/*.spec.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/chai": "^4.1.4",
     "@types/lodash": "^4.14.112",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.1.2",
     "gh-pages": "^1.2.0",
+    "mocha": "^5.2.0",
     "node-sass": "^4.9.0",
     "parcel-bundler": "^1.9.2",
     "pug": "^2.0.3",
     "rimraf": "^2.6.2",
-    "typescript": "^2.9.2"
+    "ts-node": "^7.0.0",
+    "typescript": "^2.9.2",
+    "typings": "^2.1.1"
   },
   "dependencies": {
     "lodash": "^4.17.10",

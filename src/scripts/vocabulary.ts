@@ -8,11 +8,11 @@ export class Vocabulary {
     private _positionInSet: number = 0;
     private _state: number = 0;
     private _currentWord: string[] = ['hello', 'привет'];
-    private _guessedQty:number = 0;
-    private _notGuessedQty:number = 0;
-    
-    public constructor(words:ISimpleWord[]){
-        this._words = words.map(word => Object.assign(word, { guessed: false }));
+    private _guessedQty: number = 0;
+    private _notGuessedQty: number = 0;
+
+    public constructor(words: ISimpleWord[]) {
+        this.loadNewWords(words);
         this.updateStatistic();
     }
 
@@ -22,11 +22,11 @@ export class Vocabulary {
         if (notGuessed.length < this._size) {
             additional = shuffle(this._words.filter(word => word.guessed)).slice(0, this._size - notGuessed.length);
         }
-        
+
         return this._wordsToAsk = shuffle([...notGuessed, ...additional]);
     }
 
-    public nextWord (): string[] {
+    public nextWord(): string[] {
         this._positionInSet++;
         if (this._positionInSet >= this._size) {
             this._positionInSet = 0;
@@ -39,7 +39,7 @@ export class Vocabulary {
                     }
                 });
             });
-            
+
             this._wordsToAsk = this.getWordsToAsk();
         }
         this.updateStatistic();
@@ -62,7 +62,7 @@ export class Vocabulary {
         this._guessedQty = guessedQty;
         this._notGuessedQty = notGuessedQty;
     }
-    
+
     public getCurrentWorld() {
         return this._currentWord = [
             this._wordsToAsk[this._positionInSet].en,
@@ -70,13 +70,13 @@ export class Vocabulary {
         ];
     }
 
-    public setGuessed (guessed: boolean, state: number = 0): void {
+    public setGuessed(guessed: boolean, state: number = 0): void {
         this._wordsToAsk[this._positionInSet].guessed = guessed;
         this._state = state;
     }
 
-    public loadNewWords (words: ISimpleWord[]) {
-        this._words = words.map(word => Object.assign(word, { guessed: false }));
+    public loadNewWords(words: ISimpleWord[]) {
+        this._words = words.map(word => (<any>Object).assign(word, { guessed: false }));
     }
 
     public set words(words: IWord[]) {
@@ -87,22 +87,22 @@ export class Vocabulary {
         return this._words;
     }
 
-    public get state ():number {
+    public get state(): number {
         return this._state;
     }
 
-    public set state (state: number) {
+    public set state(state: number) {
         this._state = state;
     }
 
-    public get currentWord ():string[] {
+    public get currentWord(): string[] {
         return this._currentWord;
     }
 
-    public set currentWord (currentWord: string[]) {
+    public set currentWord(currentWord: string[]) {
         this._currentWord = currentWord;
     }
-    
+
     public get size(): number {
         return this._size;
     }
@@ -111,11 +111,15 @@ export class Vocabulary {
         this._size = size;
     }
 
-    public get guessedQty (): number {
+    public get wordsToAsk(): IWord[] {
+        return this._wordsToAsk;
+    }
+
+    public get guessedQty(): number {
         return this._guessedQty;
     }
 
-    public get notGuessedQty (): number {
+    public get notGuessedQty(): number {
         return this._notGuessedQty;
     }
 }
